@@ -2,7 +2,7 @@
 
 A desktop **WYSIWYG editor for designing screens for embedded TFT touch displays**. You drag UI elements onto a live canvas and the matching HTML is generated and kept in sync in a code view, so the layout you see on screen is exactly what the device renders. A built-in **TFT bitmap font editor** lets you draw glyphs and export them as C arrays or assembly, ready to embed in firmware.
 
-> **Why it exists:** this tool grew out of a commercial project that needed visual touchscreen menus to be designed and edited quickly, on a microcontroller with very little memory. Third-party graphic editors and graphics libraries were ruled out, because the tight memory budget made them unacceptable, so the menus had to be built as compact, hand-authored layouts. This editor was created to design and rapidly iterate on exactly those screens.
+> **Why it exists:** this tool grew out of a commercial project that needed visual touchscreen menus to be designed and edited quickly, on a microcontroller with very little memory. Third-party graphic editors and graphics libraries were ruled out, because the tight memory budget made them unacceptable, so the menus had to be built as compact, hand-authored layouts. This editor was created to design and rapidly iterate on exactly those screens. The HTML each screen produced was then converted by a dedicated interpreter into the graphic primitives (lines, text and so on) that the TFT display can draw on its own.
 
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
 ![Language](https://img.shields.io/badge/language-C%2B%2B17-blue)
