@@ -84,4 +84,14 @@ cmake --build build
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+The source code of this project is released under the **MIT License** - see [LICENSE](LICENSE).
+
+### Third-party: Qt (LGPLv3)
+
+This application is built with the **Qt 6** framework (Qt Widgets, Qt WebEngine and Qt WebChannel), used here under the **GNU Lesser General Public License v3 (LGPLv3)**. Keeping the application's own code under the permissive MIT license is compatible with the LGPLv3, on the following conditions, which this project meets:
+
+- **Dynamic linking** - the Qt libraries are linked dynamically (shipped as separate DLLs via `windeployqt`), never statically, so a user can replace or relink the Qt libraries.
+- **Source availability** - the corresponding source of the Qt libraries is available from <https://www.qt.io/> and <https://code.qt.io/>.
+- **Notices** - the LGPLv3 terms and the Qt copyright are acknowledged here; the full LGPLv3 text is at <https://www.gnu.org/licenses/lgpl-3.0.html>.
+
+If Qt were linked **statically**, the combined work would have to be distributed under the LGPL/GPL, so this project deliberately uses dynamic linking.
