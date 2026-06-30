@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PropertyPanelUi</class>
+ <widget class="QWidget" name="PropertyPanelUi">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>280</width><height>800</height></rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <!-- ===== Document group ===== -->
+   <item>
+    <widget class="QGroupBox" name="documentGroup">
+     <property name="title"><string>Document</string></property>
+     <layout class="QFormLayout" name="documentFormLayout">
+      <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Canvas width</string></property></widget></item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="canvasWidthSpin">
+        <property name="minimum"><number>1</number></property>
+        <property name="maximum"><number>4096</number></property>
+        <property name="value"><number>480</number></property>
+       </widget>
+      </item>
+      <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Canvas height</string></property></widget></item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="canvasHeightSpin">
+        <property name="minimum"><number>1</number></property>
+        <property name="maximum"><number>4096</number></property>
+        <property name="value"><number>320</number></property>
+       </widget>
+      </item>
+      <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Section BG</string></property></widget></item>
+      <item row="2" column="1">
+       <widget class="QWidget" name="documentBgColorRow">
+        <layout class="QHBoxLayout" name="documentBgColorRowLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>2</number></property>
+         <item>
+          <widget class="QLineEdit" name="documentBgColorEdit">
+           <property name="text"><string>#000000</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="documentBgColorBtn">
+           <property name="minimumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="maximumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="toolTip"><string>Pick color...</string></property>
+           <property name="text"><string></string></property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Border color</string></property></widget></item>
+      <item row="3" column="1">
+       <widget class="QWidget" name="documentBorderColorRow">
+        <layout class="QHBoxLayout" name="documentBorderColorRowLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>2</number></property>
+         <item>
+          <widget class="QLineEdit" name="documentBorderColorEdit">
+           <property name="text"><string>#2455ff</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="documentBorderColorBtn">
+           <property name="minimumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="maximumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="toolTip"><string>Pick color...</string></property>
+           <property name="text"><string></string></property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Border width</string></property></widget></item>
+      <item row="4" column="1">
+       <widget class="QSpinBox" name="documentBorderWidthSpin">
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>32</number></property>
+        <property name="value"><number>1</number></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- ===== Element group ===== -->
+   <item>
+    <widget class="QGroupBox" name="elementGroup">
+     <property name="title"><string>Element</string></property>
+     <layout class="QFormLayout" name="elementFormLayout">
+      <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Type</string></property></widget></item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="typeEdit">
+        <property name="readOnly"><bool>true</bool></property>
+        <property name="text"><string>none</string></property>
+       </widget>
+      </item>
+      <item row="1" column="0"><widget class="QLabel"><property name="text"><string>X</string></property></widget></item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="xSpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Y</string></property></widget></item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="ySpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Width</string></property></widget></item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="wSpin">
+        <property name="minimum"><number>1</number></property>
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Height</string></property></widget></item>
+      <item row="4" column="1">
+       <widget class="QSpinBox" name="hSpin">
+        <property name="minimum"><number>1</number></property>
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="5" column="0"><widget class="QLabel"><property name="text"><string>BG color</string></property></widget></item>
+      <item row="5" column="1">
+       <widget class="QWidget" name="bgColorRow">
+        <layout class="QHBoxLayout" name="bgColorRowLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>2</number></property>
+         <item>
+          <widget class="QLineEdit" name="bgColorEdit">
+           <property name="text"><string>#000000</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="bgColorBtn">
+           <property name="minimumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="maximumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="toolTip"><string>Pick color...</string></property>
+           <property name="text"><string></string></property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="6" column="0"><widget class="QLabel"><property name="text"><string>Border width</string></property></widget></item>
+      <item row="6" column="1">
+       <widget class="QSpinBox" name="borderWidthSpin">
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>32</number></property>
+        <property name="suffix"><string>px</string></property>
+       </widget>
+      </item>
+      <item row="7" column="0"><widget class="QLabel"><property name="text"><string>Border color</string></property></widget></item>
+      <item row="7" column="1">
+       <widget class="QWidget" name="borderColorRow">
+        <layout class="QHBoxLayout" name="borderColorRowLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>2</number></property>
+         <item>
+          <widget class="QLineEdit" name="borderColorEdit">
+           <property name="text"><string>#ffffff</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="borderColorBtn">
+           <property name="minimumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="maximumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="toolTip"><string>Pick color...</string></property>
+           <property name="text"><string></string></property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="8" column="0"><widget class="QLabel"><property name="text"><string>Screen align X</string></property></widget></item>
+      <item row="8" column="1">
+       <widget class="QWidget" name="horizontalAlignWidget">
+        <layout class="QHBoxLayout" name="horizontalAlignLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>4</number></property>
+         <item>
+          <widget class="QToolButton" name="alignLeftButton">
+           <property name="text"><string>Left</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="alignCenterButton">
+           <property name="text"><string>Center</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="alignRightButton">
+           <property name="text"><string>Right</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="9" column="0"><widget class="QLabel"><property name="text"><string>Screen margin X</string></property></widget></item>
+      <item row="9" column="1">
+       <widget class="QSpinBox" name="horizontalScreenMarginSpin">
+        <property name="minimum"><number>-4096</number></property>
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="10" column="0"><widget class="QLabel"><property name="text"><string>Screen align Y</string></property></widget></item>
+      <item row="10" column="1">
+       <widget class="QWidget" name="verticalAlignWidget">
+        <layout class="QHBoxLayout" name="verticalAlignLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>4</number></property>
+         <item>
+          <widget class="QToolButton" name="alignTopButton">
+           <property name="text"><string>Top</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="alignMiddleButton">
+           <property name="text"><string>Middle</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="alignBottomButton">
+           <property name="text"><string>Bottom</string></property>
+           <property name="checkable"><bool>true</bool></property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred"/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="11" column="0"><widget class="QLabel"><property name="text"><string>Screen margin Y</string></property></widget></item>
+      <item row="11" column="1">
+       <widget class="QSpinBox" name="verticalScreenMarginSpin">
+        <property name="minimum"><number>-4096</number></property>
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- ===== Text group ===== -->
+   <item>
+    <widget class="QGroupBox" name="textGroup">
+     <property name="title"><string>Text</string></property>
+     <layout class="QFormLayout" name="textFormLayout">
+      <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Text</string></property></widget></item>
+      <item row="0" column="1">
+       <widget class="QPlainTextEdit" name="textEdit">
+        <property name="tabChangesFocus"><bool>true</bool></property>
+        <property name="minimumSize"><size><width>0</width><height>72</height></size></property>
+       </widget>
+      </item>
+      <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Font size</string></property></widget></item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="fontSizeCombo">
+        <property name="editable"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item row="2" column="0"><widget class="QLabel"><property name="text"><string>FG color</string></property></widget></item>
+      <item row="2" column="1">
+       <widget class="QWidget" name="fgColorRow">
+        <layout class="QHBoxLayout" name="fgColorRowLayout">
+         <property name="leftMargin"><number>0</number></property>
+         <property name="topMargin"><number>0</number></property>
+         <property name="rightMargin"><number>0</number></property>
+         <property name="bottomMargin"><number>0</number></property>
+         <property name="spacing"><number>2</number></property>
+         <item>
+          <widget class="QLineEdit" name="fgColorEdit">
+           <property name="text"><string>#ffffff</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="fgColorBtn">
+           <property name="minimumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="maximumSize"><size><width>24</width><height>24</height></size></property>
+           <property name="toolTip"><string>Pick color...</string></property>
+           <property name="text"><string></string></property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Text align</string></property></widget></item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="textAlignCombo">
+        <item><property name="text"><string>left</string></property></item>
+        <item><property name="text"><string>center</string></property></item>
+        <item><property name="text"><string>right</string></property></item>
+       </widget>
+      </item>
+      <item row="4" column="0"><widget class="QLabel"><property name="text"><string>V-align</string></property></widget></item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="verticalTextAlignCombo">
+        <item><property name="text"><string>top</string></property></item>
+        <item><property name="text"><string>center</string></property></item>
+        <item><property name="text"><string>bottom</string></property></item>
+       </widget>
+      </item>
+      <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Inset top</string></property></widget></item>
+      <item row="5" column="1">
+       <widget class="QSpinBox" name="marginTopSpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="6" column="0"><widget class="QLabel"><property name="text"><string>Inset bottom</string></property></widget></item>
+      <item row="6" column="1">
+       <widget class="QSpinBox" name="marginBottomSpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="7" column="0"><widget class="QLabel"><property name="text"><string>Inset left</string></property></widget></item>
+      <item row="7" column="1">
+       <widget class="QSpinBox" name="marginLeftSpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="8" column="0"><widget class="QLabel"><property name="text"><string>Inset right</string></property></widget></item>
+      <item row="8" column="1">
+       <widget class="QSpinBox" name="marginRightSpin">
+        <property name="maximum"><number>4096</number></property>
+       </widget>
+      </item>
+      <item row="9" column="0"><widget class="QLabel"><property name="text"><string>TFT text width</string></property></widget></item>
+      <item row="9" column="1">
+       <widget class="QLabel" name="textWidthLabel">
+        <property name="text"><string>0 px</string></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation"><enum>Qt::Vertical</enum></property>
+     <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
